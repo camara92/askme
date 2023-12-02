@@ -18,7 +18,19 @@
 
 		{% block javascripts %}{% endblock %}
 	</head>
-	<body>
-		{% block body %}{% endblock %}
-	</body>
-</html>
+	<body class="d-flex flex-column">
+		<header class="b1">Header
+		</header>
+		<div class="flex-fill b2 d-flex flex-row-nowrap justify-content-center ">
+			<div class="content d-flex flex-row-nowrap flex-fill ">
+				<div class="sidebar b1">Sidebar
+				</div>
+				<div class=" flex-fill b4"> {% block body %}{% endblock %}
+					</div>
+
+				</div>
+			</div>
+			<footer class="b3">Footer
+			</footer>
+		</body>
+	</html>
