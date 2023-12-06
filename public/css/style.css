@@ -46,7 +46,10 @@ h5,
 h6 {
     color: var(--color-dark);
 }
-
+a {
+    color: inherit;
+    text-decoration: none;
+}
 /**flex */
 .d-flex {
     display: flex;
@@ -206,19 +209,29 @@ header{
 .bg-sidebar {
     background: #64eee2 !important;
 }
-.sidebar-nav li { 
+.sidebar-nav a { 
+    display: block !important;
     margin-bottom: 20px;
-    background: red;
+    /* background:#dbada3 ; */
     padding: 20px;
     cursor: pointer !important;
+    color: white !important;
 }
-.sidebar-nav li  i {
+.sidebar-nav a  i {
     color: var(--color-dark);
+    
+}
+.sidebar-navv a {
+    background-color: #d4999d;
+    
 }
 .active {
     border-left: 5px solid var(--primary);
     background-color: var(--primary-light);
 
+}
+.bg-white-sidebar-li {
+    background: white;
 }
 /* footer  */
 

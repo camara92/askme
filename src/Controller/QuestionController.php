@@ -6,13 +6,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class HomeController extends AbstractController
+class QuestionController extends AbstractController
 {
-    #[Route('/', name: 'home')]
+    #[Route('/question/ask', name: 'app_question_form')]
     public function index(): Response
     {
-        return $this->render('home/index.html.twig', [
-            'hawa' => 'Bonjour Hawa Daouda  ! ❤️',
+        return $this->render('question/index.html.twig', [
+            'controller_name' => 'QuestionController',
         ]);
     }
 }
