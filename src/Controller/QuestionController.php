@@ -16,7 +16,7 @@ class QuestionController extends AbstractController
         $formQuestion = $this->createForm(QuestionType::class); 
         $formQuestion->handleRequest($request); 
         if($formQuestion->isSubmitted() && $formQuestion->isValid()){
-            dd($formQuestion->getData()); 
+            // dd($formQuestion->getData()); 
         }
         return $this->render('question/index.html.twig', [
             'form' => $formQuestion->createView()

@@ -6,7 +6,7 @@
 }
 
 :root {
-    --primary: #12CBC4;
+    --primary:#12CBC4;
     --primary-light: #E7F9F9;
     --accent: #0652DD;
     --warning: #EA2027;
@@ -16,7 +16,8 @@
     --border-radius: 3px;
     --border: 1px solid #ddd;
     --color: #636466;
-    --color-primary: white;
+    --color-primary: #648ad1;
+    --color-alert : rgb(202, 49, 49); 
     --color-dark: #444;
     --gray: #636466;
     --gray-light: #ddd;
@@ -124,6 +125,9 @@ a {
 .mr-5 {
     margin-right: 5px;
 }
+.mr-10 {
+    margin-right: 10px;
+}
 
 .mr-20 {
     margin-right: 20px;
@@ -132,7 +136,18 @@ a {
 .mr-50 {
     margin-right: 50px;
 }
-
+.mb-5 {
+    margin-bottom: 5px;
+}
+.mb-10 {
+    margin-bottom: 10px;
+}
+.mb-15 {
+    margin-bottom: 15px;
+}
+.mb-20{
+    margin-bottom: 20px;
+}
 .m-10 {
     margin: 10px;
 }
@@ -168,7 +183,9 @@ a {
 .p-20 {
     padding: 20px;
 }
-
+.pb-20 {
+    padding-bottom: 20px ;
+}
 .py-20 {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -267,6 +284,15 @@ a {
     font-weight: var(--font-weight-semi-bold);
 }
 
+.avatar {
+    width: 25px ;
+
+border-radius: 50%;}
+
+small {
+    font-size: var(--font-size-small) ;
+    font-family: var(--font-family);
+}
 /* header  */
 header {
     box-shadow: var(--box-shadow);
@@ -334,4 +360,34 @@ footer {
     background-color: var(--footer-background);
     background: #0a3d62;
     color: var(--color-primary);
+}
+
+/* question  */
+
+.question-content {
+    border-bottom: 1px solid var(--gray-light);
+}
+
+.clickable {
+    color: var(--color-primary);
+    font-weight: var(--font-weight-semi-bold);
+    cursor: pointer;
+}
+.block-shadow:hover {
+    cursor: pointer;
+    box-shadow: none;
+    transition:  var(--box-shadow) 0.5s; 
+}
+
+.rating-up{
+    color: var(--color-primary);
+    
+}
+.rating-down {
+    color: var(--color-alert );
+
+}
+
+.text-small {
+    font-size: var(--font-size-small);
 }
