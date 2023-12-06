@@ -8,10 +8,10 @@
 
 	<ul>
 		{% for question in questions %}
-			<li class="daouda block d-flex flex-row mb-20 block-shadow ">
+			<a href="{{ path('question_show', {id: question.id }) }}" class="daouda block d-flex flex-row mb-20 block-shadow ">
 				<div class="d-flex flex-column mr-20 align-items-center">
                 <i class="fa-sharp fa-solid fa-arrow-up {{ question.rating > 0 ? 'rating-up' : '' }}"></i>
-                <p class=" text-small" {% if question.rating > 0  %} class='rating-up' {% elseif question.rating  < 0 %} class='rating-down' {% endif %} > {{
+                <p class=" text-small {{ question.rating > 0 ? 'rating-up' : question.rating < 0 ? 'rating-down' : ''  }} " {% if question.rating > 0  %} class='rating-up' {% elseif question.rating  < 0 %} class='rating-down' {% endif %} > {{
                     question.rating 
                 }} </p>
                 <i class="fa-sharp fa-solid fa-arrow-down {{ question.rating < 0 ? 'rating-down' : '' }}  "></i>
@@ -20,8 +20,8 @@
 
 					<div>
 						<div class="mb-20 question-content  pb-20">
-							<h3 class="mb-20">{{question.title}}
-							</h3>
+							<h2 class="mb-20">{{question.title}}
+							</h2>
 							<p>
 								{{question.content }}
 							</p>
@@ -38,7 +38,7 @@
 						</div>
 					</div>
 				</div>
-			</li>
+			</a>
 		{% endfor %}
 	</ul>
 {% endblock %}

@@ -13,9 +13,10 @@ class HomeController extends AbstractController
     {
         $questions = [
             [
+                'id'=> '1', 
                 'title' => 'Je suis un titre',
                 'content' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur laboriosam asperiores libero quia tempora voluptas fuga, provident id quasi. Voluptas repellat quasi exercitationem eligendi quae aut aliquam recusandae libero a?',
-                'rating' => -10,
+                'rating' => 10,
                 'author' => [
                     'name' => 'CAMARA Daouda',
                     'avatar' => 'https://randomuser.me/api/portraits/men/64.jpg'
@@ -23,6 +24,7 @@ class HomeController extends AbstractController
                 'nbrOfResponse' => 25
             ],
             [
+                'id'=> '2', 
                 'title' => 'Je suis un titre',
                 'content' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur laboriosam asperiores libero quia tempora voluptas fuga, provident id quasi. Voluptas repellat quasi exercitationem eligendi quae aut aliquam recusandae libero a?',
                 'rating' => 40,
@@ -33,6 +35,7 @@ class HomeController extends AbstractController
                 'nbrOfResponse' => 145
             ],
             [
+                'id'=> '3', 
                 'title' => 'Je suis un titre',
                 'content' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur laboriosam asperiores libero quia tempora voluptas fuga, provident id quasi. Voluptas repellat quasi exercitationem eligendi quae aut aliquam recusandae libero a?',
                 'rating' => -20,
@@ -43,6 +46,7 @@ class HomeController extends AbstractController
                 'nbrOfResponse' => 5
             ],
             [
+                'id'=> '4', 
                 'title' => 'Je suis un titre',
                 'content' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur laboriosam asperiores libero quia tempora voluptas fuga, provident id quasi. Voluptas repellat quasi exercitationem eligendi quae aut aliquam recusandae libero a?',
                 'rating' => 40,

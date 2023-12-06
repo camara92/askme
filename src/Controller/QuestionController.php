@@ -22,4 +22,22 @@ class QuestionController extends AbstractController
             'form' => $formQuestion->createView()
         ]);
     }
+    #[Route('/question/{id}', name: 'question_show')]
+    public function show (Request $request, string $id): Response
+    {
+       $questionShow = [
+        'id'=> '1', 
+        'title' => 'Je suis un titre',
+        'content' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur laboriosam asperiores libero quia tempora voluptas fuga, provident id quasi. Voluptas repellat quasi exercitationem eligendi quae aut aliquam recusandae libero a?',
+        'rating' => -10,
+        'author' => [
+            'name' => 'CAMARA Daouda',
+            'avatar' => 'https://randomuser.me/api/portraits/men/64.jpg'
+        ],
+        'nbrOfResponse' => 25
+    ]; 
+        return $this->render('question/show.html.twig', [
+            'question' => $questionShow
+        ]);
+    }
 }
