@@ -34,21 +34,24 @@ class QuestionController extends AbstractController
         ]);
     }
     #[Route('/question/{id}', name: 'question_show')]
-    public function show(Request $request, string $id): Response
+    // public function show(Request $request, string $id): Response
+    public function show(Question $question ): Response
     {
-        $questionShow = [
-            'id' => '1',
-            'title' => 'Je suis un titre',
-            'content' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur laboriosam asperiores libero quia tempora voluptas fuga, provident id quasi. Voluptas repellat quasi exercitationem eligendi quae aut aliquam recusandae libero a?',
-            'rating' => -10,
-            'author' => [
-                'name' => 'CAMARA Daouda',
-                'avatar' => 'https://randomuser.me/api/portraits/men/64.jpg'
-            ],
-            'nbrOfResponse' => 25
-        ];
+        // $questionShow = [
+        //     'id' => '1',
+        //     'title' => 'Je suis un titre',
+        //     'content' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur laboriosam asperiores libero quia tempora voluptas fuga, provident id quasi. Voluptas repellat quasi exercitationem eligendi quae aut aliquam recusandae libero a?',
+        //     'rating' => -10,
+        //     'author' => [
+        //         'name' => 'CAMARA Daouda',
+        //         'avatar' => 'https://randomuser.me/api/portraits/men/64.jpg'
+        //     ],
+        //     'nbrOfResponse' => 25
+        // ];
+
+        
         return $this->render('question/show.html.twig', [
-            'question' => $questionShow
+            'question' => $question
         ]);
     }
 }
