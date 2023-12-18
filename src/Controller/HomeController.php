@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Question;
 use App\Repository\QuestionRepository;
 use Container0UEOsho\getQuestionService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -13,8 +14,9 @@ class HomeController extends AbstractController
     #[Route('/', name: 'home')]
     public function index(QuestionRepository $questionRepository): Response
     {
-    //    $questions= $questionRepository->findAll();
-    //    dd($questionss); 
+    $questionlists = new Question();
+    $questionlists = $questionRepository->findAll();
+    // dd($questionlists); 
         $questions = [
             [
                 'id'=> '1', 
@@ -61,7 +63,7 @@ class HomeController extends AbstractController
                 'nbrOfResponse' => 150
             ],
             [
-                'id'=> '1', 
+                'id'=> '5', 
                 'title' => 'Je suis un titre',
                 'content' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur laboriosam asperiores libero quia tempora voluptas fuga, provident id quasi. Voluptas repellat quasi exercitationem eligendi quae aut aliquam recusandae libero a?',
                 'rating' => 10,
@@ -72,7 +74,7 @@ class HomeController extends AbstractController
                 'nbrOfResponse' => 25
             ],
             [
-                'id'=> '2', 
+                'id'=> '6', 
                 'title' => 'Je suis un titre',
                 'content' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur laboriosam asperiores libero quia tempora voluptas fuga, provident id quasi. Voluptas repellat quasi exercitationem eligendi quae aut aliquam recusandae libero a?',
                 'rating' => 40,
@@ -83,7 +85,7 @@ class HomeController extends AbstractController
                 'nbrOfResponse' => 145
             ],
             [
-                'id'=> '3', 
+                'id'=> '7', 
                 'title' => 'Je suis un titre',
                 'content' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur laboriosam asperiores libero quia tempora voluptas fuga, provident id quasi. Voluptas repellat quasi exercitationem eligendi quae aut aliquam recusandae libero a?',
                 'rating' => -20,
@@ -94,7 +96,7 @@ class HomeController extends AbstractController
                 'nbrOfResponse' => 5
             ],
             [
-                'id'=> '4', 
+                'id'=> '8', 
                 'title' => 'Je suis un titre',
                 'content' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur laboriosam asperiores libero quia tempora voluptas fuga, provident id quasi. Voluptas repellat quasi exercitationem eligendi quae aut aliquam recusandae libero a?',
                 'rating' => 40,
