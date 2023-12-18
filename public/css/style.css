@@ -201,6 +201,9 @@ a {
     padding: 20px;
 }
 
+.pb-10 {
+    padding-bottom: 10px;
+}
 .pb-20 {
     padding-bottom: 20px;
 }
@@ -450,8 +453,22 @@ footer {
     line-height: var(--line-height-high);
     white-space: pre-wrap;
 }
+ .question-response-text {
+    line-height: var(--line-height-high);
+    
+}
 
 .separator {
     border-bottom: 1px solid var(--gray-light);
     margin: 30px 0px ;
+}
+.separator-response {
+    border-bottom: 1px solid rgb(149, 221, 193);
+    margin: 10px 100px ;
+}
+
+.small-s {
+    font-size: 10px;
+    color : var(--gray);
+    opacity: 0.8;
 }

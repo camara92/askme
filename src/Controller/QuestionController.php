@@ -52,7 +52,9 @@ class QuestionController extends AbstractController
 
             $comment->setCreatedAt(new \DateTimeImmutable());
             $comment->setRating(0);
-            $comment->setQuestion($question); 
+            $comment->setQuestion($question);
+            // modification du boolean nbrresponse :
+            $question->setNbrOfResponse($question->getNbrOfResponse() + 1); 
             $em->persist($comment);
             $em->flush();
             $this->addFlash('success', 'Votre commentaire a été ajoutée');
