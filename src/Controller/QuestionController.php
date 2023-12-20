@@ -25,7 +25,8 @@ class QuestionController extends AbstractController
         $formQuestion->handleRequest($request);
 
         if ($formQuestion->isSubmitted() && $formQuestion->isValid()) {
-            $question->setNbrOfResponse(0);
+            // $question->setNbrOfResponse(0);
+            $question->setNbrOfResponse($question->getNbrOfResponse()+ 1);
             $question->setRating(0);
             $question->setCreatedAt(new \DateTimeImmutable());
             $em->persist($question);
