@@ -9,15 +9,15 @@
 		<h2 class="pb-30">
 			Connexion
 		</h2>
-		<form action="{{path("login")}}" method="post">
-			<div class="form-row">
+		<form action="{{ path("login")}}" method="post">
+			<div class="form_row">
 				<label for="email">Email</label>
-				<input type="email" name="_username" autofocus id="email" value="{{username}}">
+				<input type="email" name="_username" autofocus id="email" value="{{username}}" placeholder="mon.email@email.com">
 			</div>
-			<div class="form-row">
-				<label for="password">Mot de passe
+			<div class="form_row">
+				<label for="password" >Mot de passe
 				</label>
-				<input type="password" name="_password" id="password">
+				<input type="password" name="_password" id="password" placeholder="monpassword12545">
 			</div>
 			<div class="form-row">
 				<label for="remember_me">Se souvenir de moi
