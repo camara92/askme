@@ -37,9 +37,9 @@ class Question
     #[ORM\OneToMany(mappedBy: 'question', targetEntity: Comment::class, orphanRemoval: true)]
     private Collection $comments;
 
-    #[ORM\ManyToOne(inversedBy: 'questions')]
-    #[ORM\JoinColumn(nullable: false)]
-    private ?User $author = null;
+    // #[ORM\ManyToOne(inversedBy: 'questions')]
+    // #[ORM\JoinColumn(nullable: false)]
+    // private ?User $author = null;
 
     public function __construct()
     {

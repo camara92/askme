@@ -29,9 +29,9 @@ class Comment
     #[ORM\JoinColumn(nullable: false)]
     private ?Question $question = null;
 
-    #[ORM\ManyToOne(inversedBy: 'comments')]
-    #[ORM\JoinColumn(nullable: false)]
-    private ?User $author = null;
+    // #[ORM\ManyToOne(inversedBy: 'comments')]
+    // #[ORM\JoinColumn(nullable: false)]
+    // private ?User $author = null;
 
     public function getId(): ?int
     {
@@ -86,15 +86,15 @@ class Comment
         return $this;
     }
 
-    public function getAuthor(): ?User
-    {
-        return $this->author;
-    }
+    // public function getAuthor(): ?User
+    // {
+    //     return $this->author;
+    // }
 
-    public function setAuthor(?User $author): static
-    {
-        $this->author = $author;
+    // public function setAuthor(?User $author): static
+    // {
+    //     $this->author = $author;
 
-        return $this;
-    }
+    //     return $this;
+    // }
 }

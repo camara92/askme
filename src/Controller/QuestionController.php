@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Comment;
 use App\Entity\Question;
+use App\Entity\User;
 use App\Form\CommentType;
 use App\Form\QuestionType;
 use Doctrine\ORM\EntityManagerInterface;
@@ -21,13 +22,15 @@ class QuestionController extends AbstractController
 
         $question = new Question();
         $formQuestion = $this->createForm(QuestionType::class, $question);
-
+        $user = new User();
+         
         $formQuestion->handleRequest($request);
 
         if ($formQuestion->isSubmitted() && $formQuestion->isValid()) {
             // $question->setNbrOfResponse(0);
             $question->setNbrOfResponse($question->getNbrOfResponse() + 1);
             $question->setRating(0);
+            
             $question->setCreatedAt(new \DateTimeImmutable());
             $em->persist($question);
             $em->flush();
